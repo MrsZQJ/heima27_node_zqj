@@ -1,0 +1,24 @@
+{
+  "name": "heima27_node_zqj",
+  "version": "1.0.0",
+  "description": "黑马前端27期node项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrsZQJ/heima27_node_zqj.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrsZQJ/heima27_node_zqj/issues"
+  },
+  "homepage": "https://github.com/MrsZQJ/heima27_node_zqj#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
