@@ -6,4 +6,5 @@ router.get('/register',controllers.getRegister);
 router.get('/login',controllers.login);
 router.get('/vcode',controllers.vcode);
 router.post('/register',controllers.register);
+router.post('/login',controllers.denlu);
 module.exports=router;
