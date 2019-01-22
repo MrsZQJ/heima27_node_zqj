@@ -2,5 +2,10 @@ const express=require('express');
 const path=require('path');
 const studentControllers=require(path.join(__dirname,'../controllers/studentControllers.js'));
 const studentRouters=express.Router();
-studentRouters.get('/list',studentControllers.list)
+studentRouters.get('/list',studentControllers.list);
+studentRouters.get('/add',studentControllers.add);
+studentRouters.get('/edit/:studyId',studentControllers.edit);
+studentRouters.get('/delete/:studyId',studentControllers.deleteStudent);
+studentRouters.post('/edit/:studyId',studentControllers.edit2);
+studentRouters.post('/add',studentControllers.add2);
 module.exports=studentRouters;
