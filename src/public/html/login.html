@@ -59,5 +59,24 @@
     $('#vcodeimgId').click(function(){
         $('#vcodeimgId').attr('src',`/account/vcode?${Math.random()}`);
     })
+    function register(){
+        location='/account/register'
+    }
+    function login(){
+        const username=$('#usernameId').val();
+        const password=$.md5($('#passwordId').val()+'zqj');
+        const vcode=$('#vcodeId').val();
+        console.log(username,password,vcode);
+        $.post('/account/login',{username,password,vcode},function(result){
+            console.log(result);
+            if(result.status!=0){
+                alert(result.message);
+                $('#vcodeimgId').attr('src',`/account/vcode?${Math.random()}`);
+            }
+            else{
+                location='/studentmanager/list';
+            }
+        })
+    }
 </script>
 </html>
